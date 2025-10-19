@@ -6,7 +6,33 @@
         xmlns:local="clr-namespace:PowerOff"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid Background="#FFE6E6E6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="1" Margin="5,5,5,5" Background="White" CornerRadius="5,5,5,5">
+            <Border.Effect>
+                <DropShadowEffect Color="#FFF0F0F0" ShadowDepth="3" Direction="270"/>
+            </Border.Effect>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" MinWidth="300" />
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*" MinWidth="300"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="1" Background="White" CornerRadius="5,5,5,5" Grid.Column="0" Margin="5,5,5,5">
+                <Border.Effect>
+                    <DropShadowEffect Color="#FFF0F0F0" ShadowDepth="3" Direction="270"/>
+                </Border.Effect>
+            </Border>
+            <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch"/>
+            <Border BorderThickness="1" Background="White" CornerRadius="5,5,5,5" Grid.Column="2" Margin="5,5,5,5">
+                <Border.Effect>
+                    <DropShadowEffect Color="#FFF0F0F0" ShadowDepth="3" Direction="270"/>
+                </Border.Effect>
+            </Border>
+        </Grid>
     </Grid>
 </Window>
