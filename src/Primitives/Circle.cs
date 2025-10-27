@@ -13,6 +13,7 @@ namespace PowerOff.Primitives
             CenterPoint = center;
             FirstPoint = first;
             SecondPoint = second;
+            Radius = Math.Distance(FirstPoint, SecondPoint);
         }
 
         public Circle(Point center, Point second)
@@ -20,9 +21,9 @@ namespace PowerOff.Primitives
             CenterPoint = center;
             FirstPoint = center;
             SecondPoint = second;
+            Radius = Math.Distance(FirstPoint, SecondPoint);
         }
 
-        public double Radius
-            => Math.Distance(FirstPoint, SecondPoint);
+        public double Radius { get; private set; }
     }
 }
