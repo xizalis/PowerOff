@@ -21,5 +21,8 @@ namespace PowerOff.Primitives
             FirstPoint = center;
             SecondPoint = second;
         }
+
+        public double Radius
+            => Math.Distance(FirstPoint, SecondPoint);
     }
 }
