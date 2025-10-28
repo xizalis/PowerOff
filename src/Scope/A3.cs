@@ -3,17 +3,18 @@ using System;
 
 namespace PowerOff
 {
-    // Format A3 - 297×420 мм
-
     public class A3
     {
-        double height = 420;
-        double width = 297;
-
         public void InitStartPoints(Scope scope)
         {
-            double h2 = height / 2;
-            double w2 = width / 2;
+            Page A3 = new Page(297, 420);
+            InitStartPoints(scope, A3);
+        }
+
+        public void InitStartPoints(Scope scope, Page page)
+        {
+            double h2 = page.Height / 2;
+            double w2 = page.Width / 2;
 
             scope.Points["A"] = new Point(-w2, +h2);
             scope.Points["B"] = new Point(+w2, +h2);
