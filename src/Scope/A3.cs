@@ -10,17 +10,15 @@ namespace PowerOff
         double height = 420;
         double width = 297;
 
-        public void InitABCD()
+        public void InitStartPoints(Scope scope)
         {
             double h2 = height / 2;
             double w2 = width / 2;
 
-            Point A = new Point(-w2, +h2);
-            Point B = new Point(+w2, +h2);
-            Point C = new Point(+w2, -h2);
-            Point D = new Point(-w2, -h2);
-
-            //TODO - Add A B C D to Scope
+            scope.Points["A"] = new Point(-w2, +h2);
+            scope.Points["B"] = new Point(+w2, +h2);
+            scope.Points["C"] = new Point(+w2, -h2);
+            scope.Points["D"] = new Point(-w2, -h2);
         }
     }
 }
