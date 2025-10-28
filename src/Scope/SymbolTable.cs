@@ -34,6 +34,13 @@ namespace PowerOff
                 items.Remove(name);
         }
 
+        public bool Exist(string name)
+        {
+            if (NotValid(name))
+                return false;
+            return items.ContainsKey(name);
+        }
+
         //---
 
         public T this[string name]
