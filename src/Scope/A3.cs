@@ -5,12 +5,6 @@ namespace PowerOff
 {
     public class A3
     {
-        public void InitStartPoints(Scope scope)
-        {
-            Page A3 = new Page(297, 420);
-            InitStartPoints(scope, A3);
-        }
-
         public void InitStartPoints(Scope scope, Page page)
         {
             double h2 = page.Height / 2;
