@@ -3,9 +3,9 @@ using System;
 
 namespace PowerOff
 {
-    public class A3
+    public class PageCornerPoints
     {
-        public void InitStartPoints(Scope scope, Page page)
+        public void Init(Scope scope, Page page)
         {
             double h2 = page.Height / 2;
             double w2 = page.Width / 2;
