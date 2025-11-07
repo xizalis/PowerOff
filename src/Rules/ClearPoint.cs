@@ -8,9 +8,7 @@ namespace PowerOff
     {
         public override void Handle(string request)
         {
-            string PointName = @"^[A-Za-z]{1,3}\'{0,3}$";
-            string pattern = $"({PointName})=_";
-
+            string pattern = $"^({PointName})=_$";
             var match = Regex.Match(request, pattern);
             if (match.Groups.Count == 0)
             {
